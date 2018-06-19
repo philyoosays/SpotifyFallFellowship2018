@@ -18,7 +18,6 @@ function changePossibilities(amount, coinsArr) {
     possibilities[i] = 0;
   }
   possibilities[0] = 1;
-
   coinsArr.forEach(function(coin){
     for(let j = coin; j <= amount; j++) {
       console.log('j', j, 'coin',coin)
@@ -26,6 +25,5 @@ function changePossibilities(amount, coinsArr) {
       possibilities[j] += possibilities[remainder];
     }
   });
-
   return possibilities[amount];
 }
