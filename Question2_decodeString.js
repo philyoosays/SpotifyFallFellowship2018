@@ -17,12 +17,10 @@ function decodeString(s) {
       for(let x = i + 1; x < s.length; x++) {
         toMultiply += s[x]
       }
-      console.log('the index', parseInt(s[i]))
       for(let y = 1; y <= parseInt(s[i]); y++) {
         temp += toMultiply
       }
       s = s.slice(0, (i - s.length)) + temp
-      console.log(s)
     }
   }
 }
